@@ -2,13 +2,17 @@
 
 > pkg update
 
-> pkg install python3
+> pkg install python3 git
 
 > pip3 install requests
 
 > pip3 install enquiries
 
 > pip3 install urllib
+
+> git clone https://github.com/mbingsdk/pythonChord
+
+> cd pythonChord
 
 > python3 chord.py
 
@@ -16,12 +20,16 @@
 
 > sudo apt-get update
 
-> sudo apt-get install python3
+> sudo apt-get install python3 git
 
 > pip3 install requests
 
 > pip3 install enquiries
 
 > pip3 install urllib
+
+> git clone https://github.com/mbingsdk/pythonChord
+
+> cd pythonChord
 
 > python3 chord.py
