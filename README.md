@@ -1,4 +1,4 @@
-# Termux:
+# Termux
 
 > pkg update
 
