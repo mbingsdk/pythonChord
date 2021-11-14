@@ -1,6 +1,7 @@
 from func import *
 import enquiries
 
+lagu = {}
 test = input("\nPenyanyi: ")
 out = getChord("getList", link, test, head)
 
