@@ -1,4 +1,4 @@
-from chord import *
+from func import *
 import enquiries
 
 test = input("\nPenyanyi: ")
