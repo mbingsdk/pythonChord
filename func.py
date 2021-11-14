@@ -11,7 +11,7 @@ head = {
     "Accept-Encoding":"gzip",
     "Content-Lenght":"0"
 }
-lagu = {}
+
 CLEANR = re.compile('<.*?>')
 
 def cleanhtml(raw_html):
