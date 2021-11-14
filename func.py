@@ -2,23 +2,22 @@
 
 import requests, urllib, re
 
-link = "http://sergcat.xssemble.com/service-v2.php"
-head = {
-    "Content-Type":"application/x-www-form-urlencoded",
-    "User-Agent":"Dalvik/2.1.0 (Linux; U; Android 6.0; ASUS-X008DA Build/MRA58K",
-    "Host":"sergcat.xssemble.com",
-    "Connection":"Keep-Alive",
-    "Accept-Encoding":"gzip",
-    "Content-Lenght":"0"
-}
-
 CLEANR = re.compile('<.*?>')
 
 def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, '', raw_html)
     return cleantext
 
-def getChord(mode, url, args, header):
+def getChord(mode, args):
+    url = "http://sergcat.xssemble.com/service-v2.php"
+    header = {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "User-Agent":"Dalvik/2.1.0 (Linux; U; Android 6.0; ASUS-X008DA Build/MRA58K",
+        "Host":"sergcat.xssemble.com",
+        "Connection":"Keep-Alive",
+        "Accept-Encoding":"gzip",
+        "Content-Lenght":"0"
+    }
     data = {
         "a":args,
         "cc":"0",
