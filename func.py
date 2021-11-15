@@ -7,6 +7,28 @@ CLEANR = re.compile('<.*?>')
 def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, '', raw_html)
     return cleantext
+    
+def listReplace(text, args1, args2):
+    if isinstance(args1, str):
+        if isinstance(args2, str):
+            text = text.replace(args1, args2)
+        else:
+            pass
+    elif isinstance(args1, list):
+        if isinstance(args2, str):
+            for i in args1:
+                text = text.replace(i, args2)
+        elif isinstance(args2, list):
+            a = len(args1)
+            b = len(args2)
+            if a == b:
+                for i in range(a):
+                    text = text.replace(args1[i], args2[i])
+        else:
+            pass
+    else:
+        pass
+    return text
 
 def getChord(mode, args):
     url = "http://sergcat.xssemble.com/service-v2.php"
@@ -38,8 +60,7 @@ def getChord(mode, args):
 
 def rebuild(args):
     x = ""
-    args = args.replace("<sup>", "((sup))")
-    args = args.replace("</sup>", "((!sup))")
+    args = listReplace(args, ["<sup>", "</sup>"], ["((sup))", "((!sup))"])
     args = cleanhtml(args)
     a = args.split("\n")
     for i in a:
