@@ -1,11 +1,9 @@
-#chord guitar
+#chord guitar modules
+import requests, re, enquiries
 
-import requests, re
-
-CLEANR = re.compile('<.*?>')
 
 def cleanhtml(raw_html):
-    cleantext = re.sub(CLEANR, '', raw_html)
+    cleantext = re.sub(re.compile('<.*?>'), '', raw_html)
     return cleantext
     
 def listReplace(text, args1, args2):
@@ -77,3 +75,20 @@ def rebuild(args):
         else:
             x += i+"\n"
     return x
+
+def menu(args):
+    lagu = {}
+    out = getChord("getList", args)
+    for i in range(len(out)):
+        lagu[out[i][2]] = str(out[i][0])
+    choice = enquiries.choose("\nLagu "+out[0][1], list(lagu))
+    print(choice, "\n")
+    return [lagu, choice]
+
+def showChord(args1, args2):
+    ret = getChord("getChord", args1[args2])
+    penyanyi = ret[0][0]
+    judul = ret[0][1]
+    chordLagu = ret[0][2]
+    result = rebuild(chordLagu)
+    print(result)
