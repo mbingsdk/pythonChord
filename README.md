@@ -26,8 +26,6 @@
 
 > pip3 install enquiries
 
-> pip3 install urllib
-
 > git clone https://github.com/mbingsdk/pythonChord
 
 > cd pythonChord
