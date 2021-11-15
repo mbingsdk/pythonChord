@@ -1,6 +1,6 @@
 #chord guitar
 
-import requests, urllib, re
+import requests, re
 
 CLEANR = re.compile('<.*?>')
 
