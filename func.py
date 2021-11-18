@@ -91,8 +91,18 @@ class chord:
 
     def showChord(self):
         self.result = self.getChord("getChord", self.lagu[self.choice])
-        penyanyi = self.result[0][0]
-        judul = self.result[0][1]
+        #penyanyi = self.result[0][0]
+        #judul = self.result[0][1]
         self.result = self.result[0][2]
         self.result = self.rebuild()
         print(self.result)
+        
+    def run(self):
+        while True:
+            print("\nKetik !exit untuk keluar")
+            test = input("\nPenyanyi: ")
+            if test == "!exit":
+                exit()
+            else:
+                self.menu(test)
+                self.showChord()
