@@ -2,5 +2,6 @@
 from func import *
 
 test = input("\nPenyanyi: ")
-r = menu(test)
-showChord(r[0], r[1])
+a = chord()
+a.menu(test)
+a.showChord()
