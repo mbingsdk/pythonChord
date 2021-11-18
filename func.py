@@ -5,7 +5,7 @@ class chord:
     def __init__(self):
         self.url = "http://sergcat.xssemble.com/service-v2.php"
         self.headers = {
-          "Content-Type":"application/x-www-form-urlencoded",
+            "Content-Type":"application/x-www-form-urlencoded",
             "User-Agent":"Dalvik/2.1.0 (Linux; U; Android 6.0; ASUS-X008DA Build/MRA58K",
             "Host":"sergcat.xssemble.com",
             "Connection":"Keep-Alive",
