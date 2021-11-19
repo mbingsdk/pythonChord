@@ -104,5 +104,6 @@ class chord:
             if test == "!exit":
                 exit()
             else:
+                self.lagu = {}
                 self.menu(test)
                 self.showChord()
