@@ -31,7 +31,11 @@ class chord:
         else:
             exit()
         self.result = requests.get(url=self.url, headers=self.headers, params=self.data).json()
-        return self.result
+        if self.result == []:
+            print("\n" + args + " Tidak ditemukan!")
+            exit()
+        else:
+            return self.result
 
     def listReplace(self, args1, args2):
         if isinstance(args1, str):
