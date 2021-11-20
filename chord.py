@@ -1,4 +1,4 @@
-#chord main
+# chord main
 from func import *
 
 def run():
