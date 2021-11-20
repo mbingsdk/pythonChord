@@ -1,4 +1,5 @@
-#chord guitar module
+# chord guitar module
+# by Vx6-CT
 import requests, re, enquiries
 
 class chord:
